@@ -1,15 +1,40 @@
-<%= simple_form_for(@unit_price) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :abv %>
-    <%= f.input :volume %>
-    <%= f.input :units %>
-    <%= f.input :price %>
-    <%= f.input :unitprice %>
+<%= form_for @unit_price, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :abv, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :abv, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :volume, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :volume, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :units, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :units, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :price, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :price, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :unitprice, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :unitprice, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  unit_prices_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>

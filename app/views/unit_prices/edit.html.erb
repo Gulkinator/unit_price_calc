@@ -1,6 +1,5 @@
-<h1>Editing unit_price</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @unit_price %> |
-<%= link_to 'Back', unit_prices_path %>
+<%- model_class = UnitPrice -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => UnitPrice %></h1>
+</div>
+<%= render :partial => 'form' %>
