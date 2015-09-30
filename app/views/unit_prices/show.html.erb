@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Abv:</strong>
+  <%= @unit_price.abv %>
+</p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @unit_price.volume %>
+</p>
+
+<p>
+  <strong>Units:</strong>
+  <%= @unit_price.units %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @unit_price.price %>
+</p>
+
+<p>
+  <strong>Unitprice:</strong>
+  <%= @unit_price.unitprice %>
+</p>
+
+<%= link_to 'Edit', edit_unit_price_path(@unit_price) %> |
+<%= link_to 'Back', unit_prices_path %>

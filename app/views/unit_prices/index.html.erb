@@ -1,0 +1,33 @@
+<h1>Listing unit_prices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Abv</th>
+      <th>Volume</th>
+      <th>Units</th>
+      <th>Price</th>
+      <th>Unitprice</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @unit_prices.each do |unit_price| %>
+      <tr>
+        <td><%= unit_price.abv %></td>
+        <td><%= unit_price.volume %></td>
+        <td><%= unit_price.units %></td>
+        <td><%= unit_price.price %></td>
+        <td><%= unit_price.unitprice %></td>
+        <td><%= link_to 'Show', unit_price %></td>
+        <td><%= link_to 'Edit', edit_unit_price_path(unit_price) %></td>
+        <td><%= link_to 'Destroy', unit_price, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Unit price', new_unit_price_path %>
